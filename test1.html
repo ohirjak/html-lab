@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>HTML 2D - Test 1</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="engine.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            window.onload = function() {
+                var width = 320;
+                var height = 200;
+                var render = setupRender("canvas", width, height);
+
+                console.log(render);
+
+                for (var y = 0; y < height; y++) {
+                    for (var x = 0; x < width; x++) {
+                        putPixel(render, x, y, (x / width) * 255, (y / height) * 255, 0, 255);
+                    }
+                }
+
+                putPixel(render, 10, 10, 255, 255, 255, 255);
+
+                updateRender(render);
+            }
+        </script>
+        <canvas id="canvas"></canvas>
+    </body>
+</html>
