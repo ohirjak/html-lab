@@ -28,7 +28,7 @@ function setupRender(canvasId, width, height) {
     var ctx = canvas.getContext("2d");
     var imgData = ctx.createImageData(canvas.width, canvas.height);
 
-    var info = {
+    var render = {
         context: ctx,
         imageData : imgData,
         pixelWidth: realWidth,
@@ -37,7 +37,7 @@ function setupRender(canvasId, width, height) {
         styleHeight: height
     }
 
-    return info;
+    return render;
 }
 
 function updateRender(render) {
