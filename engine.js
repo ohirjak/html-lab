@@ -35,7 +35,7 @@ function setupRender(canvasId, width, height) {
         pixelHeight: realHeight,
         styleWidth: width,
         styleHeight: height
-    }
+    };
 
     return render;
 }
