@@ -1,5 +1,5 @@
 function backingScale() {
-    if ('devicePixelRatio' in window) {
+    if ("devicePixelRatio" in window) {
         if (window.devicePixelRatio > 1) {
             return window.devicePixelRatio;
         }
@@ -30,7 +30,7 @@ function setupRender(canvasId, width, height) {
 
     var render = {
         context: ctx,
-        imageData : imgData,
+        imageData: imgData,
         pixelWidth: realWidth,
         pixelHeight: realHeight,
         styleWidth: width,
