@@ -1,0 +1,31 @@
+<html>
+<head>
+<script>
+window.onload = onLoad;
+
+function UrlExists(url) {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    console.log(http.status);
+    if (http.status != 404) {
+        console.log("WORKS");
+        //  do something
+    } else {
+        console.log("not working");
+    }
+}
+
+function onLoad() {
+    console.log("test");
+
+    var url = 'http://localhost/html-lab/web/test_url/index.html';
+    //var url = 'http://www.google.com';
+
+    UrlExists(url);
+}
+</script>
+</head>
+<body>
+</body>
+</html>
